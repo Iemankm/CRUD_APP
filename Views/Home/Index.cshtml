@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model CRUD_APP.Models.ViewModels.HomeVM;
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @if (Model.Students.Count > 0)
+            {
+                <div class="border border-dark rounded backgroundWhite">
+
+                    <h2 class="text-primary">Total Students: @Model.Students.Count</h2>
+
+                    <h2 class="text-secondary">Average Age Of Student: @Model.AvgAgeStudents</h2>
+
+                    <h2 class="text-warning">Total Students In Class: @Model.StudentsePerClass</h2>
+
+                    <h2 class="text-success">Total Students In Country: @Model.StudentsPerCountry</h2>
+                </div>
+
+            }
+            else
+            {
+                <p class="lead">No Record Exists!</p>
+            }
+        </div>
+    </div>
+</div>
+
